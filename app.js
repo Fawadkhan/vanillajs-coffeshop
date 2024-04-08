@@ -1,12 +1,15 @@
 import Store from './services/Store.js'
 import { loadData } from './services/Menu.js'
+import Router from './services/Router.js'
 
 
 window.app = {}
 app.store = Store;
+app.route = Router
 
 window.addEventListener('DOMContentLoaded', () => {
-    loadData()
+    loadData();
+    app.route.init();
 })
 
 // const $ = function(args){ return document.querySelector(args);}
